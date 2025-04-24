@@ -12,7 +12,7 @@ struct MainView: View {
     @ObservedObject var viewModel: MainViewModel
     var body: some View {
         ScrollView{
-            VStack{
+            LazyVStack{
                 SettingHeader(showSetting: $viewModel.isShowSetting)
                 titleHeader
                 pickerView(selectedAlgo: $viewModel.algo)
