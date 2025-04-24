@@ -9,19 +9,59 @@ import SwiftUI
 import Charts
 
 struct MainView: View {
-    @State var showSetting: Bool = false
+    @ObservedObject var viewModel: MainViewModel
     var body: some View {
-        VStack{
-            SettingHeader(showSetting: $showSetting)
-            titleHeader
-            pickerView()
-            actionView
-            TimeView()
-            GraphView()
-            Spacer()
-        }.sheet(isPresented: $showSetting) {
-            SettingsView()
+        ScrollView{
+            VStack{
+                SettingHeader(showSetting: $viewModel.isShowSetting)
+                titleHeader
+                pickerView(selectedAlgo: $viewModel.algo)
+                actionView
+                TimeView
+                GraphView(graphData: viewModel.graphData)
+                Spacer()
+            }.sheet(isPresented: $viewModel.isShowSetting) {
+                SettingsView(settingsData: viewModel.settingData)
+            }.onChange(of: viewModel.isShowSetting) { oldValue, newValue in
+                if(!newValue){
+                    viewModel.reset()
+                }
+            }
         }
+    }
+    
+    var actionView: some View{
+        HStack(alignment: .center, spacing: 60)
+        {
+            Button("Sort!", action: {
+                viewModel.startSorting()
+            })
+            .disabled(viewModel.isRunning)
+            Button("Reset", action: {
+                if(!viewModel.isRunning){
+                    viewModel.reset()
+                }
+                
+            })
+            .disabled(viewModel.isRunning)
+            Button("Cancel", action: {
+                viewModel.stopSorting()
+            })
+            .disabled(!viewModel.isRunning)
+            
+        }.padding()
+    }
+    var titleHeader: some View {
+        HStack{
+            Text("Sorting Visualizer")
+                .font(.title)
+                .fontWeight(.bold)
+            Spacer()
+        }
+        .padding()
+    }
+    var TimeView: some View {
+        Text("Time: \(viewModel.time) ms")
     }
 }
 
@@ -44,17 +84,9 @@ struct SettingHeader: View {
     }
     
 }
-var titleHeader: some View {
-    HStack{
-        Text("Sorting Visualizer")
-            .font(.title)
-            .fontWeight(.bold)
-        Spacer()
-    }
-    .padding()
-}
+
 struct pickerView: View {
-    @State var selectedAlgo: Algorithms = .bubble
+    @Binding var selectedAlgo: Algorithms
     var body: some View {
         HStack{
             Picker("Select Algorithm", selection: $selectedAlgo) {
@@ -67,28 +99,8 @@ struct pickerView: View {
     }
 }
 
-var actionView: some View {
-    HStack(alignment: .center, spacing: 60)
-    {
-        Button("Sort!", action: {
-            
-        })
-        Button("Reset", action: {
-            
-        })
-        Button("Cancel", action: {
-            
-        })
-        .disabled(true)
-        
-    }.padding()
-}
-struct TimeView: View {
-    @State var time: Float = 1.45
-    var body: some View {
-        Text("Time: \(Int(time*1000)) ms")
-    }
-}
+
+
 
 enum Algorithms : String , CaseIterable , Identifiable {
     var id : String {
@@ -101,5 +113,5 @@ enum Algorithms : String , CaseIterable , Identifiable {
 }
 
 #Preview {
-    MainView()
+    MainView(viewModel: MainViewModel())
 }
