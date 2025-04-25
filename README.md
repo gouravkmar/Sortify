@@ -30,9 +30,11 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 | ![MainScreen](ScreenShots/MainPage.jpeg) | ![SettingsScreen](ScreenShots/SettingPage.jpeg) |
 
 ---
-| Working Demo |
+
+| Working |
 |----------------|
-| ![Working Demo](ScreenShots/Working.mp4) |
+| ![MainScreen](ScreenShots/sorting.png) |
+---
 
 ## 🚀 Getting Started
 
