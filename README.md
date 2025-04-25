@@ -33,7 +33,7 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 | Working |
 |----------------|
-| ![MainScreen](ScreenShots/sorting.png) |
+| [Working Demo](ScreenShots/Working.mp4) |
 ---
 
 ## 🚀 Getting Started
