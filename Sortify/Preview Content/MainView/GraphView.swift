@@ -15,7 +15,7 @@ struct GraphView: View {
                 BarMark(
                     x: .value("Index", $0.label),
                     y: .value("Value", $0.value),
-                    width: .ratio(0.75),
+                    width: .ratio(0.75)
                 )
                 .foregroundStyle(color(for: Double($0.value), index: $0.index))
                 .symbol(Circle())
