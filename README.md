@@ -33,7 +33,7 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 | Working |
 |----------------|
-| [Working Demo](ScreenShots/Working.mp4) |
+| [Working Demo](ScreenShots/Working.gif) |
 ---
 
 ## 🚀 Getting Started
