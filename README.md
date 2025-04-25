@@ -27,8 +27,12 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 | Sorting Screen | Settings Screen |
 |----------------|-----------------|
-| ![screenshot1](screenshots/sorting.png) | ![screenshot2](screenshots/settings.png) |
+| ![MainScreen](ScreenShots/sorting.png) | ![SettingsScreen](ScreenShots/settings.png) |
 
+---
+| Working |
+|----------------|
+| ![MainScreen](ScreenShots/sorting.png) |
 ---
 
 ## 🚀 Getting Started
