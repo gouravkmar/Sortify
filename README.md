@@ -22,19 +22,17 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 ## 📸 Screenshots
 
-> Add your screenshots or GIFs here  
-> Recommended size: 1242x2688 (iPhone X-style)
-
 | Sorting Screen | Settings Screen |
 |----------------|-----------------|
-| ![MainScreen](ScreenShots/MainPage.jpeg) | ![SettingsScreen](ScreenShots/SettingPage.jpeg) |
+| <img src="ScreenShots/MainPage.jpeg" width="200"/> | <img src="ScreenShots/SettingPage.jpeg" width="200"/> |
 
 ---
 
 | Working |
 |----------------|
-| [Working Demo](ScreenShots/Working.gif) |
+|[Working Demo](ScreenShots/Working.gif) |
 ---
+
 
 ## 🚀 Getting Started
 
