@@ -35,17 +35,6 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 ---
 
 
-## 🚀 Getting Started
-
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/gouravkmar/sorting-visualizer-ios.git
-   ```
-2. Open the project in Xcode 14+  
-3. Run on iOS 15+ device or simulator
-
----
-
 ## 👥 Ideal For
 
 - Students learning sorting algorithms
