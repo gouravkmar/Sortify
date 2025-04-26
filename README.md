@@ -30,7 +30,8 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 | Working |
 |----------------|
-|[Working Demo](ScreenShots/Working.gif) |
+| <img src="ScreenShots/Working.gif" width="200"/> |
+
 ---
 
 
