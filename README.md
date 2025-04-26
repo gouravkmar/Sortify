@@ -40,7 +40,7 @@ Great for **students, developers, or anyone who enjoys visual learning and satis
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/sorting-visualizer-ios.git
+   git clone https://github.com/gouravkmar/sorting-visualizer-ios.git
    ```
 2. Open the project in Xcode 14+  
 3. Run on iOS 15+ device or simulator
